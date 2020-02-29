@@ -1,0 +1,6 @@
+C:\Users\owner\source\repos\WpfApp8\DalApi\bin\Debug\DalApi.dll
+C:\Users\owner\source\repos\WpfApp8\DalApi\bin\Debug\DalApi.pdb
+C:\Users\owner\source\repos\WpfApp8\bin\DalApi.dll
+C:\Users\owner\source\repos\WpfApp8\bin\DalApi.pdb
+C:\Users\owner\source\repos\WpfApp8\DalApi\obj\Debug\DalApi.dll
+C:\Users\owner\source\repos\WpfApp8\DalApi\obj\Debug\DalApi.pdb

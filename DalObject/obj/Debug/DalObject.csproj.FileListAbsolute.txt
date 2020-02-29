@@ -1,0 +1,12 @@
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\DalObject.dll
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\DalObject.pdb
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\DalApi.dll
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\data.dll
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\DalApi.pdb
+C:\Users\owner\source\repos\WpfApp8\DalObject\bin\Debug\data.pdb
+C:\Users\owner\source\repos\WpfApp8\bin\DalObject.dll
+C:\Users\owner\source\repos\WpfApp8\bin\DalObject.pdb
+C:\Users\owner\source\repos\WpfApp8\DalObject\obj\Debug\DalObject.csprojAssemblyReference.cache
+C:\Users\owner\source\repos\WpfApp8\DalObject\obj\Debug\DalObject.csproj.CopyComplete
+C:\Users\owner\source\repos\WpfApp8\DalObject\obj\Debug\DalObject.dll
+C:\Users\owner\source\repos\WpfApp8\DalObject\obj\Debug\DalObject.pdb

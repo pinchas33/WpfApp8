@@ -1,0 +1,36 @@
+﻿<Window x:Class="WpfApp8.menegerSignIn"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        
+
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="פרטים" Height="350" Width="250">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="0.3*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.1*"></RowDefinition>
+            <RowDefinition Height="0.8*"></RowDefinition>
+            <RowDefinition Height="0.1*"></RowDefinition>
+        </Grid.RowDefinitions>
+        <Label Grid.Column="1" Content="פרטי מנהל" FontWeight="Bold" FontSize="16" FontStyle="Italic" FlowDirection="RightToLeft" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Stretch" HorizontalAlignment="Center" VerticalAlignment="Bottom"></Label>
+        <Border Grid.Column="1" Grid.Row="1" BorderBrush="#D3D3D3" BorderThickness="1"  Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+        <StackPanel x:Name="listOfDetales" Grid.Row="1" Grid.Column="1">
+            <TextBox x:Name="id" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="תעודת זהות" TextAlignment="Right" Margin="8,5,8,0"  FlowDirection="RightToLeft" ></TextBox>
+            <TextBox x:Name="foolName" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="שם מלא" TextAlignment="Right" Margin="8,5" FlowDirection="RightToLeft" ></TextBox>
+            <TextBox x:Name="email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="כתובת אמייל" TextAlignment="Right" Margin="8,5"  FlowDirection="RightToLeft" ></TextBox>
+            <TextBox x:Name="password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="סיסמא" TextAlignment="Right" Margin="8,5"  FlowDirection="RightToLeft" ></TextBox>
+            
+            <Button Content="הירשם" Margin="8" Click="Button_Click"></Button>
+        </StackPanel>
+
+
+    </Grid>
+</Window>

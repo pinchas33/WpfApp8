@@ -1,0 +1,80 @@
+﻿<Window x:Class="PLGui.ReportScreen"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp8"
+        mc:Ignorable="d"
+        Title="ReportScreen" Height="450" Width="800">
+    <Window.Resources>
+        <DataTemplate x:Name="template" x:Key="soldier">
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                    <RowDefinition Height="*"></RowDefinition>
+                </Grid.RowDefinitions>
+                <Border Grid.Column="1" Grid.Row="1" BorderBrush="#D3D3D3" BorderThickness="1"  Grid.ColumnSpan="1" Grid.RowSpan="1"/>
+                <Grid Grid.Row="0" Grid.Column="1" >
+                    <DockPanel >
+                        <StackPanel>
+                            <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">מספר אישי</TextBlock>
+                            <Label Name="id" Content="{Binding Path=Id}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">שם פרטי</TextBlock>
+                            <Label Name="firstName" Content="{Binding Path=firstName}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">שם משפחה</TextBlock>
+                            <Label Name="lastName" Content="{Binding Path=lastName}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">צוות</TextBlock>
+                            <Label Name="Staff" Content="{Binding Path=Staff}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                        </StackPanel>
+                        <StackPanel>
+                            <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">סטטוס</TextBlock>
+                            <ComboBox materialDesign:HintAssist.Hint="בחר סטטוס">
+                                <ComboBoxItem>חופש</ComboBoxItem>
+                                <ComboBoxItem>בסיס</ComboBoxItem>
+                                <ComboBoxItem>תפקיד</ComboBoxItem>
+                                <ComboBoxItem>לימודים</ComboBoxItem>
+                                <ComboBoxItem>גימל</ComboBoxItem>
+                            </ComboBox>
+                        </StackPanel>
+                    </DockPanel>
+                </Grid>
+            </Grid>
+        </DataTemplate>
+    </Window.Resources>
+
+
+
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.3*" />
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="0.3*" />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="79*"/>
+            <RowDefinition Height="286*"/>
+            <RowDefinition Height="56*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.Row="0" Grid.Column="1" Content=" דוח 1" HorizontalAlignment="Center" Margin="206.333,10,206.667,9.667" FontSize="30" Width="83"></Label>
+        
+        <ListBox ScrollViewer.VerticalScrollBarVisibility="Auto" ScrollViewer.HorizontalScrollBarVisibility="Auto" Grid.Row="1" Grid.Column="1" FlowDirection="RightToLeft" ItemTemplate="{StaticResource soldier}" x:Name="soldier"  />
+        <materialDesign:Snackbar IsActive="False" x:Name="MySnackbar" Grid.Column="1" Grid.Row="2" MessageQueue="{materialDesign:MessageQueue}"  >
+            <materialDesign:SnackbarMessage Name="snackbarMassage" FlowDirection="RightToLeft" />
+        </materialDesign:Snackbar>
+
+        <StackPanel Grid.Row="1" Grid.Column="0">
+            <Button Content="שמור" Margin="8,10" Click="Button_Click"></Button>
+            <Button Content="שלח במייל" Margin="8,10"></Button>
+        </StackPanel>
+
+    </Grid>
+</Window>
