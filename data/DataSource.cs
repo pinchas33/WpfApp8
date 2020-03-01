@@ -14,7 +14,7 @@ namespace DS
     {
         public static List<Soldier> soldiers { get; set; } = new List<Soldier>();
         public static List<report> reports { get; set; } = new List<report>();
-        public static List<meneger> menegers { get; set; } = new List<meneger>();
+       // public static List<meneger> menegers { get; set; } = new List<meneger>();
         static DataSource()
         {
             Soldier s1 = new Soldier();
@@ -47,11 +47,11 @@ namespace DS
             s3.Remarks = "2";
             soldiers.Add(s3);
 
-            meneger m1 = new meneger();
-            m1.Id = "2";
-            m1.Name = "robot";
-            m1.soldiers = soldiers;
-            menegers.Add(m1);
+            //meneger m1 = new meneger();
+            //m1.Id = "2";
+            //m1.Name = "robot";
+            //m1.soldiers = soldiers;
+            //menegers.Add(m1);
         }
 
     }

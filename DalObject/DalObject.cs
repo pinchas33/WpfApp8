@@ -59,26 +59,25 @@ namespace Dal
         
         public void addReport(report report)
         {
-            //if (DataSource.reports.Any(tempREport => tempREport.idOfReport == report.idOfReport))
-            //{
-            //    throw new ArgumentException();
-            //}
+
             DataSource.reports.Add(report);
         }
 
-        public meneger GetMeneger(string id)
+        public meneger GetMeneger()
         {
             meneger meneger = new meneger();
-            meneger = DataSource.menegers.FirstOrDefault(tempMeneger => tempMeneger.Id == id);
+            Configuration.staticMeneger.deatales = Configuration.staticMeneger.Name + " \n" + Configuration.staticMeneger.Email + " ";
+            meneger = Configuration.staticMeneger;
             return meneger;
         }
-        public void addMeneger(meneger meneger)
+
+        public void updateMeneger(meneger meneger)
         {
-            if (DataSource.menegers.Any(tempmeneger => tempmeneger.Id == meneger.Id))
-            {
-                throw new ArgumentNullException();
-            }
-            DataSource.menegers.Add(meneger);
+            Configuration.staticMeneger.Id = meneger.Id;
+            Configuration.staticMeneger.Name = meneger.Name;
+            Configuration.staticMeneger.Email = meneger.Email;
+            Configuration.staticMeneger.password = meneger.password;
+            Configuration.staticMeneger.deatales = meneger.Name + " \n" + meneger.Email + " ";
         }
 
     }

@@ -12,6 +12,7 @@ namespace BO
         public string Name { get; set; }
         public string Email { get; set; }
         public string password { get; set; }
+        public string deatales { get; set; }
         public List<Soldier> soldiers { get; set; }
     }
 }

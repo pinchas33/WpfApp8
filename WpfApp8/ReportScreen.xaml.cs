@@ -30,7 +30,7 @@ namespace PLGui
 
         public ReportScreen()
         {
-            meneger meneger = bl.GetMeneger("2");
+            meneger meneger = bl.GetMeneger();
             Obs = new ObservableCollection<Soldier>(meneger.soldiers);
 
             InitializeComponent();

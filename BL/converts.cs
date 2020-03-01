@@ -35,7 +35,7 @@ namespace BL
                                 complateSoldierToBO(target, original);
                                 break;
                             case DO.meneger meneger:
-                                (target as meneger).soldiers = null;
+                                complateSoldierToDO(target, original);
                                 break;
                             default: break;
                         }
@@ -64,10 +64,17 @@ namespace BL
         {
             List<DO.Soldier> DOsoldiers = (original as DO.meneger).soldiers;
             List<BO.Soldier> BOsoldiers = new List<BO.Soldier>();
-            foreach (var s in DOsoldiers)
+            if (DOsoldiers != null)
             {
-                BOsoldiers.Add (ConvertTypes<BO.Soldier, DO.Soldier>(s));
+                foreach (var s in DOsoldiers)
+                {
+                    BOsoldiers.Add(ConvertTypes<BO.Soldier, DO.Soldier>(s));
+                }
             }
+            //else
+            //{
+            //    (target as meneger).soldiers = null;
+            //}
 
             (target as BO.meneger).soldiers = BOsoldiers;
             return (target as BO.meneger);
@@ -78,9 +85,16 @@ namespace BL
             List<DO.Soldier> DOSoldier = new List<DO.Soldier>();
 
             List<BO.Soldier> BOReport = (original as BO.meneger).soldiers;
-            foreach (var d in BOReport)
+            if (BOReport.Count > 0)
             {
-                DOSoldier.Add(ConvertTypes<DO.Soldier, BO.Soldier>(d));
+                foreach (var d in BOReport)
+                {
+                    DOSoldier.Add(ConvertTypes<DO.Soldier, BO.Soldier>(d));
+                }
+            }
+            else
+            {
+                (target as meneger).soldiers = null;
             }
 
             (target as DO.meneger).soldiers = DOSoldier;

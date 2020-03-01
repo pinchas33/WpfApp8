@@ -19,8 +19,8 @@ namespace DalApi
         void addReport(report report);
 
 
-        meneger GetMeneger(string id);
-        void addMeneger(meneger meneger);
+        meneger GetMeneger();
+        void updateMeneger(meneger meneger);
 
 
     }

@@ -28,7 +28,7 @@
             <TextBox x:Name="email" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="כתובת אמייל" TextAlignment="Right" Margin="8,5"  FlowDirection="RightToLeft" ></TextBox>
             <TextBox x:Name="password" Style="{StaticResource MaterialDesignFloatingHintTextBox}" materialDesign:HintAssist.Hint="סיסמא" TextAlignment="Right" Margin="8,5"  FlowDirection="RightToLeft" ></TextBox>
             
-            <Button Content="הירשם" Margin="8" Click="Button_Click"></Button>
+            <Button Content="שמור" Margin="8" Click="Button_Click"></Button>
         </StackPanel>
 
 

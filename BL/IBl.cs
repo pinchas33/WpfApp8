@@ -13,12 +13,12 @@ namespace BlApi
         void addSoldier(Soldier soldier);
         void updateSoldier(Soldier updateSoldier);
         void DeleteSoldier(string id);
-        meneger GetMeneger(string id);
+        meneger GetMeneger();
 
         report GetReport(string id);
         void addReport(report report);
 
-        void addMeneger(meneger meneger);
+        void updateMeneger(meneger meneger);
 
 
         IEnumerable<IGrouping<string, Soldier>> GroupsoldierBycriteria();

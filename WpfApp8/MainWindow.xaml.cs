@@ -34,10 +34,11 @@ namespace PLGui
         public meneger meneger { get; set; }
         public MainWindow()
         {
-            meneger meneger = bl.GetMeneger("2");
+            meneger meneger = bl.GetMeneger();
             Obs = new ObservableCollection<Soldier>(meneger.soldiers);
 
             InitializeComponent();
+            deatal.Text = meneger.deatales;
 
             soldier.ItemsSource = Obs;
             DataContext = meneger;

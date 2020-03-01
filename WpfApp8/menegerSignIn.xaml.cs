@@ -26,7 +26,12 @@ namespace WpfApp8
 
         public menegerSignIn()
         {
+            meneger = bl.GetMeneger();
             InitializeComponent();
+            id.Text = meneger.Id;
+            foolName.Text = meneger.Name;
+            email.Text = meneger.Email;
+            password.Text = meneger.password;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -37,7 +42,7 @@ namespace WpfApp8
                 meneger.Name = foolName.Text;
                 meneger.password = password.Text;
                 meneger.Email = email.Text;
-                bl.addMeneger(meneger);
+                bl.updateMeneger(meneger);
                 Close();
             }
             catch

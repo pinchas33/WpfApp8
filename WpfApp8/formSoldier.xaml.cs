@@ -76,7 +76,7 @@ namespace PLGui
             {
                 bl.DeleteSoldier(curentSoldier.Id);
                 Obs.Clear();
-                meneger meneger = bl.GetMeneger("2");
+                meneger meneger = bl.GetMeneger();
                 ObservableCollection<Soldier> newObs = new ObservableCollection<Soldier>(meneger.soldiers);
                 newObs.ToList().ForEach(s => Obs.Add(s));
                 Close();
@@ -94,7 +94,7 @@ namespace PLGui
             Soldier soldier = Obs.Where(s => s.Id == getSoldierUpdated().Id) as Soldier;
             Obs.Clear();
             bl.updateSoldier(getSoldierUpdated());
-            meneger meneger = bl.GetMeneger("2");
+            meneger meneger = bl.GetMeneger();
             ObservableCollection<Soldier> newObs = new ObservableCollection<Soldier>(meneger.soldiers);
             newObs.ToList().ForEach(s => Obs.Add(s));
             Close();

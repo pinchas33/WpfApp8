@@ -39,11 +39,11 @@ namespace BL
             dalObject.DeleteSoldier(id);
         }
 
-        public meneger GetMeneger(string id)
+        public meneger GetMeneger()
         {
             try
             {
-                return Converts.ConvertTypes<BO.meneger, DO.meneger>(dalObject.GetMeneger(id));
+                return Converts.ConvertTypes<BO.meneger, DO.meneger>(dalObject.GetMeneger());
             }
             catch (ArgumentNullException ex)
             {
@@ -51,11 +51,11 @@ namespace BL
             }
         }
 
-        public void addMeneger(meneger meneger)
+        public void updateMeneger(meneger meneger)
         {
             try
             {
-                dalObject.addMeneger(Converts.ConvertTypes<DO.meneger, BO.meneger>(meneger));
+                dalObject.updateMeneger(Converts.ConvertTypes<DO.meneger, BO.meneger>(meneger));
             }
             catch 
             {
@@ -66,13 +66,12 @@ namespace BL
 
         public IEnumerable<IGrouping<string, Soldier>> GroupsoldierBycriteria()
         {
-            List<BO.Soldier> soldiers = Converts.ConvertTypes<BO.meneger, DO.meneger>(dalObject.GetMeneger("2")).soldiers;
+            List<BO.Soldier> soldiers = Converts.ConvertTypes<BO.meneger, DO.meneger>(dalObject.GetMeneger()).soldiers;
 
             return (from s in soldiers
                     group s by s.firstName);
             
         }
-
 
         public report GetReport(string id)
         {
