@@ -3,6 +3,7 @@ using BO;
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net.Mail;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -30,7 +31,7 @@ namespace WpfApp8
             InitializeComponent();
             id.Text = meneger.Id;
             foolName.Text = meneger.Name;
-            email.Text = meneger.Email;
+            email.Text = meneger.Email.ToString();
             password.Text = meneger.password;
         }
 
@@ -41,7 +42,7 @@ namespace WpfApp8
                 meneger.Id = id.Text;
                 meneger.Name = foolName.Text;
                 meneger.password = password.Text;
-                meneger.Email = email.Text;
+                meneger.Email = new MailAddress(email.Text);
                 bl.updateMeneger(meneger);
                 Close();
             }

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using BO;
 using BlApi;
 using DalApi;
+using System.Net.Mail;
 
 namespace BL
 {
@@ -88,6 +89,26 @@ namespace BL
         public void addReport(report report)
         {
             dalObject.addReport(Converts.ConvertTypes<DO.report, BO.report>(report));
+        }
+
+        public void SendMail()
+        {
+            MailMessage mail = new MailMessage();
+
+            mail.To.Add(GetMeneger().Email);
+            mail.From = new MailAddress ("z4480g@Gmail.com");
+            mail.Subject = "הצעת חופשה";
+            mail.Body = "יש לי הצעת חופשה בשבילך!";
+            mail.IsBodyHtml = false;
+
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+            smtp.Timeout = 20000;
+            smtp.Credentials = new System.Net.NetworkCredential(GetMeneger().Email.ToString(), GetMeneger().password);
+            smtp.EnableSsl = true;
+            smtp.SendMailAsync(mail);
         }
 
     }

@@ -20,6 +20,8 @@ namespace BlApi
 
         void updateMeneger(meneger meneger);
 
+        void SendMail();
+
 
         IEnumerable<IGrouping<string, Soldier>> GroupsoldierBycriteria();
     }

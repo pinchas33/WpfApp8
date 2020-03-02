@@ -73,7 +73,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="0">
             <Button Content="שמור" Margin="8,10" Click="Button_Click"></Button>
-            <Button Content="שלח במייל" Margin="8,10"></Button>
+            <Button Content="שלח במייל" Margin="8,10" Click="Button_Click_1"></Button>
         </StackPanel>
 
     </Grid>
