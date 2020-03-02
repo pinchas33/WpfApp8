@@ -44,11 +44,11 @@
                         </StackPanel>
                         <StackPanel>
                             <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">פלאפון</TextBlock>
-                            <Label Name="Remarks" Content="{Binding Path=Remarks}" HorizontalAlignment="Center"></Label>
+                            <Label Name="phone" Content="{Binding Path=phone}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
                         </StackPanel>
                         <StackPanel>
                             <TextBlock   Style="{StaticResource MaterialDesignSubtitle2TextBlock}" Margin="11,0">הערות</TextBlock>
-                            <Label Name="phone" Content="{Binding Path=phone}" HorizontalAlignment="Center" VerticalAlignment="Center"></Label>
+                            <Label Name="Remarks" Content="{Binding Path=Remarks}" HorizontalAlignment="Center"></Label>
                         </StackPanel>
                     </DockPanel>
                 </Grid>
